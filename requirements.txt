@@ -1,0 +1,6 @@
+sklearn
+matplotlib
+typing
+panda
+numpy
+__future__

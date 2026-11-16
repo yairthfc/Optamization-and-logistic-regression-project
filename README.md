@@ -1,4 +1,4 @@
-# ⚙️ Optimization & Logistic Regression From Scratch — Gradient Descent, Learning Rates & Regularization
+# Optimization & Logistic Regression From Scratch: Gradient Descent, Learning Rates & Regularization
 
 This project implements a **full optimization framework from scratch**, including:
 
@@ -10,17 +10,17 @@ This project implements a **full optimization framework from scratch**, includin
 - ROC curve evaluation + optimal threshold
 - Analysis of different learning rates on L1/L2 objectives
 
-Everything is implemented manually using NumPy — **no scikit‑learn models** (except for metrics/ROC plotting helper).
+Everything is implemented by hand with NumPy. **No scikit-learn models** (only a metrics/ROC plotting helper).
 
 ---
 
-# 📁 Project Structure
+# Project Structure
 
 ```
 optimization-from-scratch/
 │
 ├── src/
-│   ├── base_estimator.py            # scikit-learn–style estimator API
+│   ├── base_estimator.py            # scikit-learn-style estimator API
 │   ├── base_learning_rate.py        # Base class for LR strategies
 │   ├── base_module.py               # Base class for differentiable objective functions
 │   ├── learning_rate.py             # FixedLR, ExponentialLR implementations
@@ -40,12 +40,12 @@ optimization-from-scratch/
 
 ---
 
-# 🚀 Implemented Components
+# Implemented Components
 
-## 🔹 BaseEstimator  
+## BaseEstimator  
 Located in: `src/base_estimator.py`
 
-Provides a scikit‑learn–style interface:
+Provides a scikit-learn-style interface:
 
 - `fit(X, y)`
 - `predict(X)`
@@ -53,11 +53,10 @@ Provides a scikit‑learn–style interface:
 - `fit_predict(X, y)`
 
 All real functionality is implemented through `_fit`, `_predict`, `_loss`.  
-Source: fileciteturn3file1
 
 ---
 
-## 🔹 BaseModule (Objective Function API)
+## BaseModule (Objective Function API)
 Located in: `src/base_module.py`  
 Defines:
 
@@ -66,19 +65,17 @@ Defines:
 - Accessible `.weights` property  
 
 Used for: logistic regression, L1/L2 modules, regularized modules.  
-Source: fileciteturn3file3
 
 ---
 
-## 🔹 Learning Rate Strategies  
+## Learning Rate Strategies  
 Located in: `src/base_learning_rate.py` + `src/learning_rate.py`
 
 Includes:
 
-### ✔ **FixedLR** — constant learning rate  
-Source: fileciteturn3file7
+### **FixedLR**: constant learning rate  
 
-### ✔ **ExponentialLR** — decaying step size  
+### **ExponentialLR**: decaying step size  
 Implements:  
 \[
 \eta_t = \eta_0 \cdot \gamma^t
@@ -86,9 +83,8 @@ Implements:
 
 ---
 
-## 🔹 Gradient Descent Engine  
+## Gradient Descent Engine  
 Located in: `src/gradient_descent.py`  
-Source: fileciteturn3file5
 
 Features:
 
@@ -106,9 +102,8 @@ This is the backbone used by logistic regression.
 
 ---
 
-## 🔹 Cross‑Validation (Manual)  
+## Cross‑Validation (Manual)  
 Located in: `src/cross_validate.py`  
-Source: fileciteturn3file4
 
 Implements K‑fold CV:
 
@@ -118,9 +113,8 @@ Implements K‑fold CV:
 
 ---
 
-## 🔹 Logistic Regression (With Regularization)
+## Logistic Regression (With Regularization)
 Located in: `src/logistic_regression.py`  
-Source: fileciteturn3file8
 
 Features:
 
@@ -140,9 +134,8 @@ Used heavily in `gradient_descent_investigation.py`.
 
 ---
 
-## 🔹 Loss Functions  
+## Loss Functions  
 Located in: `src/loss_functions.py`  
-Source: fileciteturn3file9
 
 Includes:
 
@@ -154,7 +147,7 @@ Includes:
 
 ---
 
-# 📊 Analysis & Experiments
+# Analysis & Experiments
 
 ## 1️⃣ Gradient Descent on L1 and L2 objectives
 
@@ -171,7 +164,6 @@ It produces:
 - Convergence curve per learning rate  
 - Objective value evolution  
 
-Source: fileciteturn3file6
 
 ---
 
@@ -194,7 +186,7 @@ Outputs:
 
 ---
 
-# 🧠 Theoretical PDF
+# Theoretical PDF
 
 Found in: `docs/Answers.pdf`
 
@@ -210,7 +202,7 @@ Includes:
 
 ---
 
-# 📦 Installation
+# Installation
 
 ```bash
 pip install -r requirements.txt
@@ -218,7 +210,7 @@ pip install -r requirements.txt
 
 ---
 
-# ▶️ Usage
+# Usage
 
 ### Run Gradient Descent Investigation:
 ```bash
@@ -244,7 +236,7 @@ preds = model.predict(X_test)
 
 ---
 
-# 🛠 Technologies Used
+# Technologies Used
 
 - Python  
 - NumPy  
@@ -255,7 +247,7 @@ preds = model.predict(X_test)
 
 ---
 
-# 🎯 Learning Outcomes
+# Learning Outcomes
 
 This project demonstrates:
 
@@ -270,11 +262,11 @@ This project demonstrates:
 
 ---
 
-# 📘 License
+# License
 
 MIT License.
 
 ---
 
-# 🙌 Author  
+# Author  
 **Yair Mahfud**
